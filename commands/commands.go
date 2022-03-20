@@ -21,10 +21,18 @@ func (c *Commands) G(cmdArg string) string {
 	return fmt.Sprintf("https://www.google.com/#q=%s", url.QueryEscape(cmdArg))
 }
 
-func (c *Commands) Author() string {
-	return "https://www.markusdosch.com"
-}
-
 func (c *Commands) So(cmdArg string) string {
 	return fmt.Sprintf("https://stackoverflow.com/search?q=%s", url.QueryEscape(cmdArg))
+}
+
+func (c *Commands) Pr(cmdArg string) string {
+	return fmt.Sprintf("https://github.com/CamusEnergy/bando/pull/%s", url.QueryEscape(cmdArg))
+}
+
+func (c *Commands) Gh(cmdArg string) string {
+	return fmt.Sprintf("https://github.com/search?q=org%3ACamusEnergy+%s&type=code", url.QueryEscape(cmdArg))
+}
+
+func (c *Commands) Ar(cmdArg string) string {
+	return "https://console.cloud.google.com/artifacts?project=camus-infra"
 }
