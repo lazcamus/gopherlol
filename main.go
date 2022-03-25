@@ -53,7 +53,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 	if cmdMethod == reflect.ValueOf(nil) {
 		// cmdMethod not found => fall back to google
-		url := fmt.Sprintf("https://www.google.com/#q=%s", url.QueryEscape(q))
+		url := fmt.Sprintf("https://www.google.com/search?q=%s", url.QueryEscape(q))
 		http.Redirect(w, r, url, http.StatusSeeOther)
 		return
 	}
