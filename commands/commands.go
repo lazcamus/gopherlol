@@ -33,6 +33,19 @@ func (c *Commands) Gh(cmdArg string) string {
 	return fmt.Sprintf("https://github.com/search?q=org%3ACamusEnergy+%s&type=code", url.QueryEscape(cmdArg))
 }
 
+func (c *Commands) Bando(cmdArg string) string {
+	return "https://github.com/CamusEnergy/bando/tree/master"
+}
+
+func (c *Commands) Gt(cmdArg string) string {
+	return "https://app.graphite.dev/"
+}
+
+
+func (c *Commands) Cci(cmdArg string) string {
+	return fmt.Sprintf("https://app.circleci.com/pipelines/github/CamusEnergy/bando?filter=all", url.QueryEscape(cmdArg))
+}
+
 func (c *Commands) Ar(cmdArg string) string {
 	return "https://console.cloud.google.com/artifacts?project=camus-infra"
 }
