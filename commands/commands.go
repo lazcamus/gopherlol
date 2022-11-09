@@ -49,3 +49,11 @@ func (c *Commands) Cci(cmdArg string) string {
 func (c *Commands) Ar(cmdArg string) string {
 	return "https://console.cloud.google.com/artifacts?project=camus-infra"
 }
+
+func (c *Commands) Gc(cmdArg string) string {
+	return fmt.Sprintf("https://console.cloud.google.com/welcome?project=%s", url.QueryEscape(cmdArg))
+}
+
+func (c *Commands) Go(cmdArg string) string {
+	return fmt.Sprintf("https://go.grid.dev/%s", url.QueryEscape(cmdArg))
+}
